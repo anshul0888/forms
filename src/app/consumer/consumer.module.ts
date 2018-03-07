@@ -26,7 +26,6 @@ import { YourApplicationsComponent } from './application/your-applications/your-
     YourApplicationsComponent
   ],
   exports: [
-    ApplicationComponent
   ]
 })
 export class ConsumerModule { }
