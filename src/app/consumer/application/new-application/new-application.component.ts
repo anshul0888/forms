@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import * as fromApplication from '../store/application.reducers';
+import * as ApplicationActions from '../store/application.actions';
 
 @Component({
   selector: 'app-new-application',
@@ -8,7 +11,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class NewApplicationComponent implements OnInit {
   newApplicationForm: FormGroup;
-  constructor() { }
+  constructor(private store: Store<fromApplication.State>) { }
 
   ngOnInit() {
     // New application form for user.
@@ -27,6 +30,7 @@ export class NewApplicationComponent implements OnInit {
     });
   }
   onNewApplicationSubmit() {
+    this.store.dispatch(new ApplicationActions.SaveNewApplication());
     console.log(this.newApplicationForm.value);
   }
 }
