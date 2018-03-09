@@ -15,7 +15,7 @@ export class ApplicationEffects {
     .withLatestFrom(this.store.select('newApplication'))
     .switchMap(
       ([action, state]) => {
-        const req = new HttpRequest('PUT', 'http://localhost:3000', state.newApplication);
+        const req = new HttpRequest('PUT', 'http://localhost:3000/consumer-newapp-save', state.newApplication);
         return this.httpClient.request(req);
       }
     );

@@ -1,4 +1,4 @@
-import { ActionReducer, ActionReducerMap } from '@ngrx/store';
+import { ActionReducerMap } from '@ngrx/store';
 import * as fromApplication from '../consumer/application/store/application.reducers';
 
 export interface AppState {
