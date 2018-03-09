@@ -20,6 +20,7 @@ import { MainHomeComponent } from './main-home/main-home.component';
   exports: [
     AppRoutingModule,
     HeaderComponent,
+    FooterComponent,
     LoginComponent
   ]
 })

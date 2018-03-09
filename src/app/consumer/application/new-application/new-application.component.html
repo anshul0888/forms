@@ -1,3 +1,108 @@
-<p>
-  new-application works!
-</p>
+<div class="backbody">
+  <div class="container new-application-body">
+    <div class="page-header">
+      <h2>New Application</h2>
+    </div>
+    <br>
+    <form [formGroup]="newApplicationForm" (ngSubmit)="onNewApplicationSubmit()" class="form-horizontal">
+      <div class="row">
+        <label for="applicantName" class="col-sm-3 control-label">Applicants Name</label>
+        <div class="col-sm-9">
+          <input type="text" formControlName="applicantName" id="applicantName" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="fatherName_husbandName" class="col-sm-3 control-label">Father's Name/ Husband's Name</label>
+        <div class="col-sm-9">
+          <input type="text" formControlName="fatherName_husbandName" id="fatherName_husbandName" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="contactNumber" class="col-sm-3 control-label">Contact</label>
+        <div class="col-sm-9">
+          <input type="text" formControlName="contactNumber" id="contactNumber" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="email" class="col-sm-3 control-label">E-mail</label>
+        <div class="col-sm-9">
+          <input type="text" formControlName="email" id="email" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="connectionAddress" class="col-sm-3 control-label">Address for Connection</label>
+        <div class="col-sm-9">
+          <input type="text" formControlName="connectionAddress" id="connectionAddress" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="permanentAddress" class="col-sm-3 control-label">Permanent Address</label>
+        <div class="col-sm-9">
+          <input type="text" formControlName="permanentAddress" id="permanentAddress" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="aadharNumber" class="col-sm-3 control-label">Aadhar</label>
+        <div class="col-sm-9">
+          <input type="text" formControlName="aadharNumber" id="aadharNumber" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="connectionCategory" class="col-sm-3 control-label">Category of connection</label>
+        <div class="col-sm-9">
+          <select id="connectionCategory" [formControlName]="'connectionCategory'" class="form-control">
+            <option value=null disabled>Please select</option>
+            <option value="DS">Domestic Supply (DS)</option>
+            <option value="NDS">Non Domestic Supply (NDS)</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="connectionType" class="col-sm-3 control-label">Type of connection</label>
+        <div class="col-sm-9">
+          <select id="connectionType" formControlName="connectionType" class="form-control">
+            <option value=null disabled>Please select</option>
+            <option value="Permanent">Permanent</option>
+            <option value="Temporary">Temporary</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="loadDemand" class="col-sm-3 control-label">Load Demand</label>
+        <div class="col-sm-9">
+          <input type="text" formControlName="loadDemand" id="loadDemand" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="voltageSupply" class="col-sm-3 control-label">Type of connection</label>
+        <div class="col-sm-9">
+          <select id="voltageSupply" formControlName="voltageSupply" class="form-control">
+            <option value=null disabled>Please select</option>
+            <option value="1 Phase">1 Phase</option>
+            <option value="3 Phase">3 Phase</option>
+            <option value="11 KV">11 KV</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-5">
+          <button class="btn btn-success btn-block" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+    <br>
+  </div>
+
+</div>

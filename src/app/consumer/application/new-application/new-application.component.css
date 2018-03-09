@@ -1,0 +1,9 @@
+.new-application-body {
+  box-shadow: 0 0 15px rgba(155,155,155,0.6);
+  background-color: white;
+  border-radius: 5px;
+}
+.backbody{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

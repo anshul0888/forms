@@ -10,11 +10,13 @@ import { ClosingApplicationComponent } from './application/closing-application/c
 import { YourApplicationsComponent } from './application/your-applications/your-applications.component';
 import { UpdateApplicationComponent } from './application/update-application/update-application.component';
 import { ConsumerRoutingModule } from './consumer-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    ConsumerRoutingModule
+    ConsumerRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [
     HomeComponent,
